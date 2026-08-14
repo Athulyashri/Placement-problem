@@ -1,0 +1,15 @@
+class Solution {
+    static int getLastDigit(String a, String b) {
+
+        int base = Integer.parseInt(a);
+        int exponent = Integer.parseInt(b);
+
+        int result = 1;
+
+        for (int i = 1; i <= exponent; i++) {
+            result = (result * base) % 10;
+        }
+
+        return result;
+    }
+}
